@@ -1,0 +1,36 @@
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px; /* Without it, it zooms out and crops in, with it, it zooms the whole image */
+}
+
+.row {
+  margin-left: 20px;
+  color: white;
+}
+
+/* To tell all the browsers to display none */
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__poster {
+  width: 100%;
+  object-fit: contain; /* Maintains the aspect ratio */
+  max-height: 100px;
+  transition: transform 450ms; /* Applies transition to transform wherever it is used, in this case in hover effect, so basically it applies transition to anything mentioned there, nothing more */
+  margin-right: 10px;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
